@@ -1,0 +1,503 @@
+
+> deskgoo@0.1.0 dev
+> next dev --port 3100
+
+▲ Next.js 16.3.4 (Turbopack)
+- Local:         http://localhost:3100
+- Network:       http://192.168.1.64:3100
+✓ Ready in 2.1s
+✓ Running next.config.ts took 171ms
+
+○ Compiling / ...
+⨯ ./components/Footer.tsx:1:1
+Error: Export Dribbble doesn't exist in target module
+[31m[1m>[0m [90m1 |[0m [36mimport[0m { [33mDribbble[0m, [33mInstagram[0m, [33mLinkedin[0m, [33mTwitter[0m } [36mfrom[0m [32m"lucide-react"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m2 |[0m
+  [90m3 |[0m [36mconst[0m [33mSITEMAP[0m = [
+  [90m4 |[0m   { label: [32m"Services"[0m, href: [32m"#services"[0m },
+
+The export Dribbble was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-client] (ecmascript).
+Did you mean to import Drill?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/Footer.tsx [Client Component Browser]
+    ./components/HomeClient.tsx [Client Component Browser]
+    ./components/HomeClient.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/Footer.tsx [Client Component SSR]
+    ./components/HomeClient.tsx [Client Component SSR]
+    ./components/HomeClient.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+
+
+./components/Footer.tsx:1:1
+Error: Export Dribbble doesn't exist in target module
+[31m[1m>[0m [90m1 |[0m [36mimport[0m { [33mDribbble[0m, [33mInstagram[0m, [33mLinkedin[0m, [33mTwitter[0m } [36mfrom[0m [32m"lucide-react"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m2 |[0m
+  [90m3 |[0m [36mconst[0m [33mSITEMAP[0m = [
+  [90m4 |[0m   { label: [32m"Services"[0m, href: [32m"#services"[0m },
+
+The export Dribbble was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-ssr] (ecmascript).
+Did you mean to import Drill?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/Footer.tsx [Client Component Browser]
+    ./components/HomeClient.tsx [Client Component Browser]
+    ./components/HomeClient.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/Footer.tsx [Client Component SSR]
+    ./components/HomeClient.tsx [Client Component SSR]
+    ./components/HomeClient.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+
+
+./components/Footer.tsx:1:1
+Error: Export Instagram doesn't exist in target module
+[31m[1m>[0m [90m1 |[0m [36mimport[0m { [33mDribbble[0m, [33mInstagram[0m, [33mLinkedin[0m, [33mTwitter[0m } [36mfrom[0m [32m"lucide-react"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m2 |[0m
+  [90m3 |[0m [36mconst[0m [33mSITEMAP[0m = [
+  [90m4 |[0m   { label: [32m"Services"[0m, href: [32m"#services"[0m },
+
+The export Instagram was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-client] (ecmascript).
+Did you mean to import Star?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/Footer.tsx [Client Component Browser]
+    ./components/HomeClient.tsx [Client Component Browser]
+    ./components/HomeClient.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/Footer.tsx [Client Component SSR]
+    ./components/HomeClient.tsx [Client Component SSR]
+    ./components/HomeClient.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+
+
+./components/Footer.tsx:1:1
+Error: Export Instagram doesn't exist in target module
+[31m[1m>[0m [90m1 |[0m [36mimport[0m { [33mDribbble[0m, [33mInstagram[0m, [33mLinkedin[0m, [33mTwitter[0m } [36mfrom[0m [32m"lucide-react"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m2 |[0m
+  [90m3 |[0m [36mconst[0m [33mSITEMAP[0m = [
+  [90m4 |[0m   { label: [32m"Services"[0m, href: [32m"#services"[0m },
+
+The export Instagram was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-ssr] (ecmascript).
+Did you mean to import Star?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/Footer.tsx [Client Component Browser]
+    ./components/HomeClient.tsx [Client Component Browser]
+    ./components/HomeClient.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/Footer.tsx [Client Component SSR]
+    ./components/HomeClient.tsx [Client Component SSR]
+    ./components/HomeClient.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+
+
+./components/Footer.tsx:1:1
+Error: Export Linkedin doesn't exist in target module
+[31m[1m>[0m [90m1 |[0m [36mimport[0m { [33mDribbble[0m, [33mInstagram[0m, [33mLinkedin[0m, [33mTwitter[0m } [36mfrom[0m [32m"lucide-react"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m2 |[0m
+  [90m3 |[0m [36mconst[0m [33mSITEMAP[0m = [
+  [90m4 |[0m   { label: [32m"Services"[0m, href: [32m"#services"[0m },
+
+The export Linkedin was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-client] (ecmascript).
+Did you mean to import Link?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/Footer.tsx [Client Component Browser]
+    ./components/HomeClient.tsx [Client Component Browser]
+    ./components/HomeClient.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/Footer.tsx [Client Component SSR]
+    ./components/HomeClient.tsx [Client Component SSR]
+    ./components/HomeClient.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+
+
+./components/Footer.tsx:1:1
+Error: Export Linkedin doesn't exist in target module
+[31m[1m>[0m [90m1 |[0m [36mimport[0m { [33mDribbble[0m, [33mInstagram[0m, [33mLinkedin[0m, [33mTwitter[0m } [36mfrom[0m [32m"lucide-react"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m2 |[0m
+  [90m3 |[0m [36mconst[0m [33mSITEMAP[0m = [
+  [90m4 |[0m   { label: [32m"Services"[0m, href: [32m"#services"[0m },
+
+The export Linkedin was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-ssr] (ecmascript).
+Did you mean to import Link?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/Footer.tsx [Client Component Browser]
+    ./components/HomeClient.tsx [Client Component Browser]
+    ./components/HomeClient.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/Footer.tsx [Client Component SSR]
+    ./components/HomeClient.tsx [Client Component SSR]
+    ./components/HomeClient.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+
+
+./components/Footer.tsx:1:1
+Error: Export Twitter doesn't exist in target module
+[31m[1m>[0m [90m1 |[0m [36mimport[0m { [33mDribbble[0m, [33mInstagram[0m, [33mLinkedin[0m, [33mTwitter[0m } [36mfrom[0m [32m"lucide-react"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m2 |[0m
+  [90m3 |[0m [36mconst[0m [33mSITEMAP[0m = [
+  [90m4 |[0m   { label: [32m"Services"[0m, href: [32m"#services"[0m },
+
+The export Twitter was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-client] (ecmascript).
+Did you mean to import Timer?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/Footer.tsx [Client Component Browser]
+    ./components/HomeClient.tsx [Client Component Browser]
+    ./components/HomeClient.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/Footer.tsx [Client Component SSR]
+    ./components/HomeClient.tsx [Client Component SSR]
+    ./components/HomeClient.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+
+
+./components/Footer.tsx:1:1
+Error: Export Twitter doesn't exist in target module
+[31m[1m>[0m [90m1 |[0m [36mimport[0m { [33mDribbble[0m, [33mInstagram[0m, [33mLinkedin[0m, [33mTwitter[0m } [36mfrom[0m [32m"lucide-react"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m2 |[0m
+  [90m3 |[0m [36mconst[0m [33mSITEMAP[0m = [
+  [90m4 |[0m   { label: [32m"Services"[0m, href: [32m"#services"[0m },
+
+The export Twitter was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-ssr] (ecmascript).
+Did you mean to import Timer?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/Footer.tsx [Client Component Browser]
+    ./components/HomeClient.tsx [Client Component Browser]
+    ./components/HomeClient.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/Footer.tsx [Client Component SSR]
+    ./components/HomeClient.tsx [Client Component SSR]
+    ./components/HomeClient.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+
+○ Compiling /_error ...
+ GET / 500 in 57s (next.js: 57s, application-code: 455ms)
+⨯ ./components/Footer.tsx:1:1
+Error: Export Dribbble doesn't exist in target module
+[31m[1m>[0m [90m1 |[0m [36mimport[0m { [33mDribbble[0m, [33mInstagram[0m, [33mLinkedin[0m, [33mX[0m } [36mfrom[0m [32m"lucide-react"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m2 |[0m
+  [90m3 |[0m [36mconst[0m [33mSITEMAP[0m = [
+  [90m4 |[0m   { label: [32m"Services"[0m, href: [32m"#services"[0m },
+
+The export Dribbble was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-client] (ecmascript).
+Did you mean to import Drill?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/Footer.tsx [Client Component Browser]
+    ./components/HomeClient.tsx [Client Component Browser]
+    ./components/HomeClient.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/Footer.tsx [Client Component SSR]
+    ./components/HomeClient.tsx [Client Component SSR]
+    ./components/HomeClient.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+
+
+./components/Footer.tsx:1:1
+Error: Export Dribbble doesn't exist in target module
+[31m[1m>[0m [90m1 |[0m [36mimport[0m { [33mDribbble[0m, [33mInstagram[0m, [33mLinkedin[0m, [33mX[0m } [36mfrom[0m [32m"lucide-react"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m2 |[0m
+  [90m3 |[0m [36mconst[0m [33mSITEMAP[0m = [
+  [90m4 |[0m   { label: [32m"Services"[0m, href: [32m"#services"[0m },
+
+The export Dribbble was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-ssr] (ecmascript).
+Did you mean to import Drill?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/Footer.tsx [Client Component Browser]
+    ./components/HomeClient.tsx [Client Component Browser]
+    ./components/HomeClient.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/Footer.tsx [Client Component SSR]
+    ./components/HomeClient.tsx [Client Component SSR]
+    ./components/HomeClient.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+
+
+./components/Footer.tsx:1:1
+Error: Export Instagram doesn't exist in target module
+[31m[1m>[0m [90m1 |[0m [36mimport[0m { [33mDribbble[0m, [33mInstagram[0m, [33mLinkedin[0m, [33mX[0m } [36mfrom[0m [32m"lucide-react"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m2 |[0m
+  [90m3 |[0m [36mconst[0m [33mSITEMAP[0m = [
+  [90m4 |[0m   { label: [32m"Services"[0m, href: [32m"#services"[0m },
+
+The export Instagram was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-client] (ecmascript).
+Did you mean to import Star?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/Footer.tsx [Client Component Browser]
+    ./components/HomeClient.tsx [Client Component Browser]
+    ./components/HomeClient.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/Footer.tsx [Client Component SSR]
+    ./components/HomeClient.tsx [Client Component SSR]
+    ./components/HomeClient.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+
+
+./components/Footer.tsx:1:1
+Error: Export Instagram doesn't exist in target module
+[31m[1m>[0m [90m1 |[0m [36mimport[0m { [33mDribbble[0m, [33mInstagram[0m, [33mLinkedin[0m, [33mX[0m } [36mfrom[0m [32m"lucide-react"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m2 |[0m
+  [90m3 |[0m [36mconst[0m [33mSITEMAP[0m = [
+  [90m4 |[0m   { label: [32m"Services"[0m, href: [32m"#services"[0m },
+
+The export Instagram was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-ssr] (ecmascript).
+Did you mean to import Star?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/Footer.tsx [Client Component Browser]
+    ./components/HomeClient.tsx [Client Component Browser]
+    ./components/HomeClient.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/Footer.tsx [Client Component SSR]
+    ./components/HomeClient.tsx [Client Component SSR]
+    ./components/HomeClient.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+
+
+./components/Footer.tsx:1:1
+Error: Export Linkedin doesn't exist in target module
+[31m[1m>[0m [90m1 |[0m [36mimport[0m { [33mDribbble[0m, [33mInstagram[0m, [33mLinkedin[0m, [33mX[0m } [36mfrom[0m [32m"lucide-react"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m2 |[0m
+  [90m3 |[0m [36mconst[0m [33mSITEMAP[0m = [
+  [90m4 |[0m   { label: [32m"Services"[0m, href: [32m"#services"[0m },
+
+The export Linkedin was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-client] (ecmascript).
+Did you mean to import Link?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/Footer.tsx [Client Component Browser]
+    ./components/HomeClient.tsx [Client Component Browser]
+    ./components/HomeClient.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/Footer.tsx [Client Component SSR]
+    ./components/HomeClient.tsx [Client Component SSR]
+    ./components/HomeClient.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+
+
+./components/Footer.tsx:1:1
+Error: Export Linkedin doesn't exist in target module
+[31m[1m>[0m [90m1 |[0m [36mimport[0m { [33mDribbble[0m, [33mInstagram[0m, [33mLinkedin[0m, [33mX[0m } [36mfrom[0m [32m"lucide-react"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m2 |[0m
+  [90m3 |[0m [36mconst[0m [33mSITEMAP[0m = [
+  [90m4 |[0m   { label: [32m"Services"[0m, href: [32m"#services"[0m },
+
+The export Linkedin was not found in module [project]/node_modules/lucide-react/dist/esm/lucide-react.mjs [app-ssr] (ecmascript).
+Did you mean to import Link?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./components/Footer.tsx [Client Component Browser]
+    ./components/HomeClient.tsx [Client Component Browser]
+    ./components/HomeClient.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./components/Footer.tsx [Client Component SSR]
+    ./components/HomeClient.tsx [Client Component SSR]
+    ./components/HomeClient.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+
+ GET / 500 in 146ms (next.js: 112ms, application-code: 33ms)
+✓ Compiled in 7.7s
+ GET / 200 in 3.5s (next.js: 1846ms, application-code: 1681ms)
+ GET / 200 in 443ms (next.js: 109ms, application-code: 334ms)
+✓ Compiled in 2.2s
+ GET / 200 in 100ms (next.js: 41ms, application-code: 59ms)
+✓ Compiled in 1389ms
+ GET / 200 in 89ms (next.js: 27ms, application-code: 62ms)
+✓ Compiled in 2.4s
+ GET / 200 in 74ms (next.js: 27ms, application-code: 48ms)
+✓ Compiled in 2.8s
+ GET / 200 in 83ms (next.js: 31ms, application-code: 52ms)
+✓ Compiled in 1632ms
+ GET / 200 in 69ms (next.js: 26ms, application-code: 42ms)
+✓ Compiled in 620ms
+ GET / 200 in 78ms (next.js: 27ms, application-code: 51ms)
+✓ Compiled in 1098ms
+ GET / 200 in 152ms (next.js: 23ms, application-code: 129ms)
+ GET / 200 in 1005ms (next.js: 62ms, application-code: 943ms)
+ GET / 200 in 230ms (next.js: 104ms, application-code: 126ms)
+ GET / 200 in 441ms (next.js: 183ms, application-code: 258ms)
+ GET / 200 in 71ms (next.js: 15ms, application-code: 56ms)
+ GET / 200 in 127ms (next.js: 14ms, application-code: 113ms)
+ GET / 200 in 121ms (next.js: 13ms, application-code: 108ms)
+ GET / 200 in 118ms (next.js: 14ms, application-code: 104ms)
+ GET / 200 in 123ms (next.js: 12ms, application-code: 112ms)
+ GET / 200 in 82ms (next.js: 14ms, application-code: 68ms)
+ GET / 200 in 64ms (next.js: 16ms, application-code: 48ms)
+✓ Compiled in 751ms
+ GET / 200 in 351ms (next.js: 250ms, application-code: 101ms)
+ GET / 200 in 123ms (next.js: 19ms, application-code: 105ms)
+ GET / 200 in 123ms (next.js: 14ms, application-code: 108ms)
+ GET / 200 in 136ms (next.js: 14ms, application-code: 122ms)
+ GET / 200 in 129ms (next.js: 13ms, application-code: 117ms)
+ GET / 200 in 118ms (next.js: 14ms, application-code: 104ms)
+ GET / 200 in 96ms (next.js: 14ms, application-code: 81ms)
+ GET / 200 in 152ms (next.js: 34ms, application-code: 118ms)
+ GET / 200 in 132ms (next.js: 16ms, application-code: 116ms)
+ GET / 200 in 60ms (next.js: 14ms, application-code: 47ms)
+✓ Compiled in 544ms
+ GET / 200 in 397ms (next.js: 179ms, application-code: 218ms)
+ GET / 200 in 127ms (next.js: 20ms, application-code: 108ms)
+ GET / 200 in 118ms (next.js: 13ms, application-code: 105ms)
+ GET / 200 in 119ms (next.js: 16ms, application-code: 103ms)
+ GET / 200 in 118ms (next.js: 15ms, application-code: 103ms)
+ GET / 200 in 114ms (next.js: 15ms, application-code: 99ms)
+ GET / 200 in 119ms (next.js: 11ms, application-code: 108ms)
+ GET / 200 in 126ms (next.js: 13ms, application-code: 113ms)
+ GET / 200 in 131ms (next.js: 14ms, application-code: 117ms)
+ GET / 200 in 121ms (next.js: 15ms, application-code: 106ms)
+ GET / 200 in 116ms (next.js: 15ms, application-code: 101ms)
+ GET / 200 in 61ms (next.js: 15ms, application-code: 47ms)
+✓ Compiled in 1918ms
+ GET / 200 in 380ms (next.js: 188ms, application-code: 192ms)
+ GET / 200 in 70ms (next.js: 21ms, application-code: 49ms)
+ GET / 200 in 75ms (next.js: 31ms, application-code: 44ms)
+ GET / 200 in 128ms (next.js: 13ms, application-code: 116ms)
+ GET / 200 in 120ms (next.js: 14ms, application-code: 107ms)
+ GET / 200 in 143ms (next.js: 15ms, application-code: 127ms)
+ GET / 200 in 87ms (next.js: 12ms, application-code: 75ms)
+ GET / 200 in 127ms (next.js: 19ms, application-code: 108ms)
+ GET / 200 in 127ms (next.js: 14ms, application-code: 113ms)
+ GET / 200 in 127ms (next.js: 15ms, application-code: 112ms)
+ GET / 200 in 120ms (next.js: 13ms, application-code: 107ms)
+ GET / 200 in 130ms (next.js: 13ms, application-code: 117ms)
+ GET / 200 in 128ms (next.js: 15ms, application-code: 113ms)
+ GET / 200 in 62ms (next.js: 14ms, application-code: 48ms)
+✓ Compiled in 3.7s
+ GET / 200 in 3.2s (next.js: 2.9s, application-code: 284ms)
+ GET / 200 in 136ms (next.js: 15ms, application-code: 121ms)
+ GET / 200 in 127ms (next.js: 14ms, application-code: 113ms)
+ GET / 200 in 137ms (next.js: 19ms, application-code: 118ms)
+ GET / 200 in 131ms (next.js: 11ms, application-code: 120ms)
+ GET / 200 in 120ms (next.js: 16ms, application-code: 104ms)
+ GET / 200 in 115ms (next.js: 11ms, application-code: 104ms)
+ GET / 200 in 72ms (next.js: 18ms, application-code: 55ms)
+ GET / 200 in 77ms (next.js: 15ms, application-code: 61ms)
+ GET / 200 in 118ms (next.js: 16ms, application-code: 102ms)
+ GET / 200 in 124ms (next.js: 14ms, application-code: 111ms)
+ GET / 200 in 120ms (next.js: 14ms, application-code: 105ms)
+ GET / 200 in 137ms (next.js: 13ms, application-code: 124ms)
+ GET / 200 in 84ms (next.js: 19ms, application-code: 66ms)
+ GET / 200 in 127ms (next.js: 16ms, application-code: 110ms)
+ GET / 200 in 115ms (next.js: 13ms, application-code: 101ms)
+ GET / 200 in 59ms (next.js: 14ms, application-code: 46ms)
+ GET / 200 in 2.2s (next.js: 320ms, application-code: 1898ms)
+○ Compiling /about ...
+ GET /about 200 in 15.2s (next.js: 15.1s, application-code: 125ms)
+ GET /about 200 in 155ms (next.js: 42ms, application-code: 113ms)
+ GET /contact 200 in 13.1s (next.js: 13.0s, application-code: 120ms)
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+ GET / 200 in 431ms (next.js: 46ms, application-code: 385ms)
+ GET /about 200 in 554ms (next.js: 67ms, application-code: 486ms)
+○ Compiling /services ...
+ GET /services 200 in 5.5s (next.js: 5.1s, application-code: 451ms)
+○ Compiling /services/[slug] ...
+ GET /services/software-development 200 in 11.0s (next.js: 4.3s, generate-params: 6.4s, application-code: 250ms)
+ GET /services/web-design 200 in 196ms (next.js: 23ms, generate-params: 12ms, application-code: 161ms)
+ GET /services/mobile-apps 200 in 181ms (next.js: 28ms, generate-params: 0.0ms, application-code: 152ms)
+ GET /services/seo-marketing 200 in 193ms (next.js: 44ms, generate-params: 0.0ms, application-code: 150ms)
+○ Compiling /products ...
+ GET /products 200 in 5.7s (next.js: 4.8s, application-code: 834ms)
+ GET /contact 200 in 320ms (next.js: 28ms, application-code: 292ms)
+ GET /does-not-exist 404 in 2.1s (next.js: 1901ms, application-code: 150ms)
+ GET /about 200 in 113ms (next.js: 44ms, application-code: 70ms)
+ GET /contact 200 in 105ms (next.js: 24ms, application-code: 81ms)
+ GET /about 200 in 65ms (next.js: 16ms, application-code: 49ms)
+ GET /products 200 in 78ms (next.js: 36ms, application-code: 42ms)
+ GET /services/software-development 200 in 132ms (next.js: 36ms, generate-params: 19ms, application-code: 78ms)
+ GET /services/web-design 200 in 201ms (next.js: 31ms, generate-params: 17ms, application-code: 154ms)
+ GET /services 200 in 88ms (next.js: 30ms, application-code: 58ms)
+ GET /services/mobile-apps 200 in 88ms (next.js: 18ms, generate-params: 14ms, application-code: 56ms)
+ GET /services/seo-marketing 200 in 123ms (next.js: 26ms, generate-params: 24ms, application-code: 73ms)
+ GET / 200 in 70ms (next.js: 26ms, application-code: 45ms)
