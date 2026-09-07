@@ -1,7 +1,9 @@
 "use client";
 
+import Brands from "./Brands";
 import CTA from "./CTA";
 import Hero from "./Hero";
+import LatestPosts from "./LatestPosts";
 import Marquee from "./Marquee";
 import ProductsStrip from "./ProductsStrip";
 import Services from "./Services";
@@ -13,10 +15,12 @@ export default function HomeClient() {
     <>
       <Hero />
       <Marquee />
+      <Brands />
       <Services />
       <ProductsStrip />
       <Stats />
       <Testimonials />
+      <LatestPosts />
       <CTA />
     </>
   );

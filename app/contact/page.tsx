@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Clock, Mail, MessageSquare } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
+import ContactMap from "@/components/ContactMap";
 import PageHero from "@/components/PageHero";
 import Reveal from "@/components/Reveal";
 
@@ -72,17 +73,24 @@ export default function ContactPage() {
             <Reveal delay={0.35}>
               <div className="rounded-2xl border border-line bg-gradient-to-br from-iris/15 via-panel to-panel p-6">
                 <p className="font-display text-lg font-semibold text-mist">
-                  Prefer to see work first?
+                  Prefer to see it live?
                 </p>
                 <p className="mt-2 text-sm leading-relaxed text-fog">
-                  Ask for a live walkthrough of DeskgooPOS or DeskgooERP — real
-                  products, real users, no slideware.
+                  Skip the email —{" "}
+                  <a href="/demo#demo-form" className="text-gradient font-semibold">
+                    book a 30-minute demo
+                  </a>{" "}
+                  of DeskgooPOS or DeskgooERP with a product specialist.
                 </p>
               </div>
             </Reveal>
           </div>
 
           <ContactForm />
+        </div>
+
+        <div className="mx-auto max-w-7xl px-6 lg:px-10">
+          <ContactMap />
         </div>
       </section>
     </>

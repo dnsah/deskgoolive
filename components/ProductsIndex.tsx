@@ -2,6 +2,7 @@
 
 import { motion } from "motion/react";
 import { ArrowUpRight, Check } from "lucide-react";
+import Link from "next/link";
 import { PRODUCTS } from "@/lib/data";
 import Magnetic from "./Magnetic";
 import PageHero from "./PageHero";
@@ -85,16 +86,14 @@ export default function ProductsIndex() {
                 </ul>
 
                 <Magnetic strength={0.25} className="mt-10 inline-block">
-                  <a
-                    href={`mailto:hello@deskgoo.com?subject=${encodeURIComponent(
-                      `Demo request — ${p.name}`
-                    )}`}
+                  <Link
+                    href={`/demo?product=${encodeURIComponent(p.name)}`}
                     className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-iris to-orchid px-7 py-4 text-sm font-semibold text-white shadow-[0_8px_40px_-8px_rgba(110,91,255,0.7)]"
                   >
                     <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/25 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
                     Book a demo
                     <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:rotate-45" />
-                  </a>
+                  </Link>
                 </Magnetic>
               </div>
 

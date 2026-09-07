@@ -2,6 +2,7 @@
 
 import { motion } from "motion/react";
 import { ArrowUpRight, Mail } from "lucide-react";
+import Link from "next/link";
 import Magnetic from "./Magnetic";
 import Reveal from "./Reveal";
 
@@ -39,15 +40,15 @@ export default function CTA() {
         <Reveal delay={0.3}>
           <div className="mt-12 flex flex-wrap items-center justify-center gap-5">
             <Magnetic strength={0.3}>
-              <a
-                href="mailto:hello@deskgoo.com"
+              <Link
+                href="/contact#contact-form"
                 className="group relative inline-flex items-center gap-3 overflow-hidden rounded-full bg-gradient-to-r from-iris to-orchid px-9 py-5 text-base font-semibold text-white shadow-[0_10px_50px_-10px_rgba(110,91,255,0.8)] transition-shadow hover:shadow-[0_10px_70px_-6px_rgba(110,91,255,1)]"
               >
                 <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/25 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
                 <Mail className="h-5 w-5" />
                 hello@deskgoo.com
                 <ArrowUpRight className="h-5 w-5 transition-transform duration-300 group-hover:rotate-45" />
-              </a>
+              </Link>
             </Magnetic>
           </div>
         </Reveal>

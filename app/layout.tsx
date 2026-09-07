@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import SiteShell from "@/components/SiteShell";
+import { themeInitScript } from "@/components/ThemeToggle";
 import "./globals.css";
 
 const inter = Inter({
@@ -42,6 +43,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${inter.variable} ${grotesk.variable} h-full antialiased`}
     >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+      </head>
       <body className="min-h-full flex flex-col font-sans">
         <SiteShell>{children}</SiteShell>
       </body>

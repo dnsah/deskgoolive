@@ -4,6 +4,7 @@ import { AnimatePresence } from "motion/react";
 import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
 import CustomCursor from "./CustomCursor";
 import Footer from "./Footer";
+import HashFocus from "./HashFocus";
 import Navbar from "./Navbar";
 import Preloader from "./Preloader";
 
@@ -29,6 +30,7 @@ export default function SiteShell({ children }: { children: ReactNode }) {
       </AnimatePresence>
 
       <CustomCursor />
+      <HashFocus />
       <div className="noise-overlay" aria-hidden />
 
       <Navbar />

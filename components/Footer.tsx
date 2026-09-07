@@ -55,6 +55,9 @@ const SITEMAP = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Products", href: "/products" },
+  { label: "Case Studies", href: "/case-studies" },
+  { label: "Blog", href: "/blog" },
+  { label: "Book a demo", href: "/demo" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -127,12 +130,12 @@ export default function Footer() {
               ))}
             </ul>
             <h3 className="mt-8 mb-4 text-xs tracking-[0.3em] text-fog/60 uppercase">Get in touch</h3>
-            <a
-              href="mailto:hello@deskgoo.com"
+            <Link
+              href="/contact#contact-form"
               className="text-sm text-fog transition-colors hover:text-mist"
             >
               hello@deskgoo.com
-            </a>
+            </Link>
           </div>
         </div>
 

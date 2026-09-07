@@ -27,7 +27,8 @@ export default function ContactForm() {
   }
 
   return (
-    <motion.div
+    <div id="contact-form" className="scroll-mt-28">
+      <motion.div
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
@@ -121,6 +122,7 @@ export default function ContactForm() {
           </p>
         </form>
       )}
-    </motion.div>
+      </motion.div>
+    </div>
   );
 }

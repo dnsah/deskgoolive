@@ -7,9 +7,12 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { SERVICES } from "@/lib/data";
 import Magnetic from "./Magnetic";
+import ThemeToggle from "./ThemeToggle";
 
 const NAV_LINKS = [
   { label: "Products", href: "/products" },
+  { label: "Case Studies", href: "/case-studies" },
+  { label: "Blog", href: "/blog" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
@@ -98,12 +101,21 @@ export default function Navbar() {
           </ul>
 
           <div className="flex items-center gap-3">
-            <Magnetic strength={0.25} className="hidden md:block">
+            <ThemeToggle />
+            <Magnetic strength={0.25} className="hidden lg:block">
               <Link
-                href="/contact"
-                className="group flex items-center gap-1.5 rounded-full bg-mist px-5 py-2.5 text-sm font-semibold text-ink transition-colors hover:bg-white"
+                href="/contact#contact-form"
+                className="flex items-center gap-1.5 rounded-full border border-line px-5 py-2.5 text-sm font-semibold text-mist transition-colors hover:border-iris/50"
               >
                 Start a project
+              </Link>
+            </Magnetic>
+            <Magnetic strength={0.25} className="hidden md:block">
+              <Link
+                href="/demo#demo-form"
+                className="group flex items-center gap-1.5 rounded-full bg-mist px-5 py-2.5 text-sm font-semibold text-ink transition-colors hover:bg-white"
+              >
+                Book a demo
                 <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:rotate-45" />
               </Link>
             </Magnetic>
@@ -132,13 +144,16 @@ export default function Navbar() {
               <span className="font-display text-xl font-bold text-mist">
                 deskgoo<span className="text-gradient">®</span>
               </span>
-              <button
-                onClick={() => setOpen(false)}
-                aria-label="Close menu"
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-line text-mist"
-              >
-                <X className="h-5 w-5" />
-              </button>
+              <div className="flex items-center gap-3">
+                <ThemeToggle />
+                <button
+                  onClick={() => setOpen(false)}
+                  aria-label="Close menu"
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-line text-mist"
+                >
+                  <X className="h-5 w-5" />
+                </button>
+              </div>
             </div>
             <nav className="flex flex-1 flex-col gap-1 px-8 py-8">
               <motion.p
@@ -173,7 +188,7 @@ export default function Navbar() {
               >
                 Company
               </motion.p>
-              {[{ label: "Home", href: "/" }, ...NAV_LINKS, { label: "All services", href: "/services" }].map((l, i) => (
+              {[{ label: "Home", href: "/" }, ...NAV_LINKS, { label: "All services", href: "/services" }, { label: "Book a demo", href: "/demo#demo-form" }].map((l, i) => (
                 <motion.div
                   key={l.href}
                   initial={{ opacity: 0, x: -30 }}

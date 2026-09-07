@@ -1,13 +1,52 @@
 @import "tailwindcss";
 
+/* ------------------------------------------------------------------ */
+/*  Theme tokens — runtime variables so light/dark can switch.        */
+/*  Dark is the default; `html.light` flips to the light palette.     */
+/* ------------------------------------------------------------------ */
+
+:root {
+  color-scheme: dark;
+  --ink: #08080d;
+  --panel: #0e0e15;
+  --panel2: #14141d;
+  --line: rgba(255, 255, 255, 0.08);
+  --fog: #9b9bb0;
+  --mist: #e8e8f2;
+  --scrollbar-track: #08080d;
+  --scrollbar-thumb: #26263a;
+  --scrollbar-thumb-hover: #343450;
+  --stroke: rgba(255, 255, 255, 0.34);
+  --stroke-faint: rgba(255, 255, 255, 0.14);
+  --grid-line: rgba(255, 255, 255, 0.05);
+  --hero-glow-opacity: 1;
+}
+
+html.light {
+  color-scheme: light;
+  --ink: #f5f5fa;
+  --panel: #ffffff;
+  --panel2: #eef0f7;
+  --line: rgba(12, 12, 40, 0.12);
+  --fog: #5b5b74;
+  --mist: #171722;
+  --scrollbar-track: #f5f5fa;
+  --scrollbar-thumb: #c3c3d5;
+  --scrollbar-thumb-hover: #a8a8c0;
+  --stroke: rgba(20, 20, 50, 0.4);
+  --stroke-faint: rgba(20, 20, 50, 0.18);
+  --grid-line: rgba(12, 12, 40, 0.06);
+  --hero-glow-opacity: 0.5;
+}
+
 @theme {
   /* Palette — Linear-grade dark with Stripe-grade gradient accents */
-  --color-ink: #08080d;
-  --color-panel: #0e0e15;
-  --color-panel2: #14141d;
-  --color-line: rgba(255, 255, 255, 0.08);
-  --color-fog: #9b9bb0;
-  --color-mist: #e8e8f2;
+  --color-ink: var(--ink);
+  --color-panel: var(--panel);
+  --color-panel2: var(--panel2);
+  --color-line: var(--line);
+  --color-fog: var(--fog);
+  --color-mist: var(--mist);
   --color-iris: #6e5bff;
   --color-orchid: #a855f7;
   --color-aqua: #22d3ee;
@@ -66,14 +105,14 @@ body {
   width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--color-ink);
+  background: var(--scrollbar-track);
 }
 ::-webkit-scrollbar-thumb {
-  background: #26263a;
+  background: var(--scrollbar-thumb);
   border-radius: 8px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #343450;
+  background: var(--scrollbar-thumb-hover);
 }
 
 /* ---------- helpers ---------- */
@@ -86,19 +125,19 @@ body {
 }
 
 .text-stroke {
-  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.34);
+  -webkit-text-stroke: 1.5px var(--stroke);
   color: transparent;
 }
 
 .text-stroke-faint {
-  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.14);
+  -webkit-text-stroke: 1px var(--stroke-faint);
   color: transparent;
 }
 
 .bg-grid {
   background-image:
-    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
   background-size: 76px 76px;
 }
 
