@@ -1,17 +1,12 @@
 import type { Metadata } from "next";
-import { Inter, Space_Grotesk } from "next/font/google";
+import { Chakra_Petch } from "next/font/google";
 import SiteShell from "@/components/SiteShell";
 import { themeInitScript } from "@/components/ThemeToggle";
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const grotesk = Space_Grotesk({
-  variable: "--font-grotesk",
+const chakra = Chakra_Petch({
+  variable: "--font-chakra",
+  weight: ["300", "400", "500", "600", "700"],
   subsets: ["latin"],
   display: "swap",
 });
@@ -41,7 +36,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${grotesk.variable} h-full antialiased`}
+      className={`${chakra.variable} h-full antialiased`}
     >
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />

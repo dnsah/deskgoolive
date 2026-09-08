@@ -49,7 +49,9 @@ export default function Marquee() {
       >
         {/* bold gradient strip — Trionn style */}
         <div className="-rotate-2 scale-[1.03] border-y border-white/10 bg-gradient-to-r from-iris via-orchid to-aqua py-4 md:py-5">
-          <Row />
+          <div className="hover:[animation-play-state:paused]">
+            <Row />
+          </div>
         </div>
         {/* ghost strip underneath */}
         <div className="absolute inset-x-0 bottom-0 rotate-1 border-y border-line py-3 opacity-70 [margin-inline:-2rem]">

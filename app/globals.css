@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* `light:` utilities apply to descendants of html.light */
+@custom-variant light (&:where(html.light *));
+
 /* ------------------------------------------------------------------ */
 /*  Theme tokens — runtime variables so light/dark can switch.        */
 /*  Dark is the default; `html.light` flips to the light palette.     */
@@ -52,8 +55,8 @@ html.light {
   --color-aqua: #22d3ee;
   --color-ember: #ffb45c;
 
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-grotesk), var(--font-inter), sans-serif;
+  --font-sans: var(--font-chakra), "Chakra Petch Expanded", "Chakra Petch", ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-chakra), "Chakra Petch Expanded", "Chakra Petch", sans-serif;
 
   --animate-marquee: marquee 30s linear infinite;
   --animate-marquee-rev: marquee-rev 36s linear infinite;
@@ -62,6 +65,9 @@ html.light {
   --animate-drift: drift 16s ease-in-out infinite alternate;
   --animate-spin-slow: spin 16s linear infinite;
   --animate-pulse-dot: pulse-dot 2s ease-in-out infinite;
+  --animate-shimmer: shimmer 5s linear infinite;
+  --animate-glow-pulse: glow-pulse 3.2s ease-in-out infinite;
+  --animate-float-x: float-x 8s ease-in-out infinite;
 
   @keyframes marquee {
     from { transform: translateX(0); }
@@ -83,6 +89,22 @@ html.light {
   @keyframes pulse-dot {
     0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.55); }
     50% { opacity: 0.75; box-shadow: 0 0 0 6px rgba(74, 222, 128, 0); }
+  }
+  @keyframes deskgoo-load {
+    from { width: 0%; }
+    to { width: 100%; }
+  }
+  @keyframes shimmer {
+    from { background-position: 0% center; }
+    to { background-position: -200% center; }
+  }
+  @keyframes glow-pulse {
+    0%, 100% { box-shadow: 0 8px 40px -8px rgba(110, 91, 255, 0.7); }
+    50% { box-shadow: 0 10px 60px -4px rgba(168, 85, 247, 0.9); }
+  }
+  @keyframes float-x {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(14px); }
   }
 }
 
@@ -122,6 +144,16 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+}
+
+/* Continuous traveling-sheen variant for hero-sized gradient text */
+.text-gradient-shimmer {
+  background: linear-gradient(94deg, #6e5bff 0%, #a855f7 25%, #22d3ee 50%, #a855f7 75%, #6e5bff 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: var(--animate-shimmer);
 }
 
 .text-stroke {

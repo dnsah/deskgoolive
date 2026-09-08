@@ -26,7 +26,7 @@ export default function CTA() {
         <Reveal delay={0.1}>
           <h2 className="font-display text-[clamp(2.8rem,9vw,8rem)] leading-[0.95] font-bold tracking-tight uppercase">
             <span className="block text-mist">Have an idea?</span>
-            <span className="text-gradient block">Let&apos;s build it.</span>
+            <span className="text-gradient-shimmer block">Let&apos;s build it.</span>
           </h2>
         </Reveal>
 

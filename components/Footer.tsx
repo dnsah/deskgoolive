@@ -1,5 +1,6 @@
 import type { SVGProps } from "react";
 import Link from "next/link";
+import { motion } from "motion/react";
 import { PRODUCTS, SERVICES } from "@/lib/data";
 
 /* lucide-react dropped brand icons — inline SVGs instead */
@@ -139,10 +140,21 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* giant wordmark */}
+        {/* giant wordmark — letters rise on first view */}
         <div className="mt-16 overflow-hidden" aria-hidden>
           <p className="text-stroke-faint -mb-[0.16em] text-center font-display text-[18vw] leading-none font-bold tracking-tight uppercase select-none">
-            Deskgoo
+            {"Deskgoo".split("").map((ch, i) => (
+              <motion.span
+                key={i}
+                className="inline-block"
+                initial={{ y: "60%", opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true, margin: "-40px" }}
+                transition={{ duration: 0.7, delay: i * 0.05, ease: [0.22, 1, 0.36, 1] }}
+              >
+                {ch}
+              </motion.span>
+            ))}
           </p>
         </div>
 

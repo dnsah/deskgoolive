@@ -1,14 +1,19 @@
 "use client";
 
-import Brands from "./Brands";
-import CTA from "./CTA";
+import dynamic from "next/dynamic";
 import Hero from "./Hero";
-import LatestPosts from "./LatestPosts";
 import Marquee from "./Marquee";
-import ProductsStrip from "./ProductsStrip";
 import Services from "./Services";
-import Stats from "./Stats";
-import Testimonials from "./Testimonials";
+
+/* Below-fold sections load as separate chunks after hydration, so the
+   initial parse/execute cost (and TBT) stays low. They still SSR. */
+const Brands = dynamic(() => import("./Brands"));
+const ProductsStrip = dynamic(() => import("./ProductsStrip"));
+const Stats = dynamic(() => import("./Stats"));
+const Testimonials = dynamic(() => import("./Testimonials"));
+const CaseStudiesPreview = dynamic(() => import("./CaseStudiesPreview"));
+const LatestPosts = dynamic(() => import("./LatestPosts"));
+const CTA = dynamic(() => import("./CTA"));
 
 export default function HomeClient() {
   return (
@@ -20,6 +25,7 @@ export default function HomeClient() {
       <ProductsStrip />
       <Stats />
       <Testimonials />
+      <CaseStudiesPreview />
       <LatestPosts />
       <CTA />
     </>

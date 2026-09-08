@@ -67,6 +67,7 @@ export default function BlogIndex() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ duration: 0.8, delay: 0.05 * i, ease: [0.22, 1, 0.36, 1] }}
+                whileHover={{ y: -8 }}
               >
                 <Link
                   href={`/blog/${p.slug}`}

@@ -1,7 +1,6 @@
 "use client";
 
 import { Moon, Sun } from "lucide-react";
-import { useEffect, useState } from "react";
 
 const STORAGE_KEY = "deskgoo-theme";
 
@@ -19,21 +18,15 @@ export const themeInitScript = `
 })();
 `;
 
+/**
+ * The icon crossfade is driven purely by CSS (the `light:` variant targets
+ * html.light), so there is no state to hydrate and no post-mount flicker.
+ */
 export default function ThemeToggle() {
-  const [light, setLight] = useState(false);
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setLight(document.documentElement.classList.contains("light"));
-    setMounted(true);
-  }, []);
-
   const toggle = () => {
-    const next = !light;
-    setLight(next);
-    document.documentElement.classList.toggle("light", next);
+    const light = document.documentElement.classList.toggle("light");
     try {
-      localStorage.setItem(STORAGE_KEY, next ? "light" : "dark");
+      localStorage.setItem(STORAGE_KEY, light ? "light" : "dark");
     } catch {
       /* private mode — theme just won't persist */
     }
@@ -42,20 +35,11 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={toggle}
-      aria-label={light ? "Switch to dark theme" : "Switch to light theme"}
+      aria-label="Toggle light/dark theme"
       className="flex h-10 w-10 items-center justify-center rounded-full border border-line text-mist transition-colors hover:border-iris/50 hover:text-mist"
     >
-      {/* Keep both icons mounted; crossfade after hydration to avoid mismatch */}
-      <Sun
-        className={`h-[18px] w-[18px] transition-all duration-300 ${
-          mounted && light ? "rotate-0 scale-100 opacity-100" : "rotate-90 scale-0 opacity-0"
-        }`}
-      />
-      <Moon
-        className={`absolute h-[18px] w-[18px] transition-all duration-300 ${
-          mounted && !light ? "rotate-0 scale-100 opacity-100" : "-rotate-90 scale-0 opacity-0"
-        }`}
-      />
+      <Sun className="h-[18px] w-[18px] rotate-90 scale-0 opacity-0 transition-all duration-300 light:rotate-0 light:scale-100 light:opacity-100" />
+      <Moon className="absolute h-[18px] w-[18px] rotate-0 scale-100 opacity-100 transition-all duration-300 light:-rotate-90 light:scale-0 light:opacity-0" />
     </button>
   );
 }

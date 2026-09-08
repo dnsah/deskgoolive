@@ -40,6 +40,7 @@ export default function LatestPosts() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.8, delay: i * 0.08, ease: [0.22, 1, 0.36, 1] }}
+              whileHover={{ y: -8 }}
             >
               <Link
                 href={`/blog/${p.slug}`}

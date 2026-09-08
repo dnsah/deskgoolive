@@ -32,6 +32,13 @@ export default function PageHero({ eyebrow, title, sub, children }: PageHeroProp
         <h1 className="max-w-4xl font-display text-[clamp(2.6rem,7vw,5.5rem)] leading-[1.02] font-bold tracking-tight text-mist">
           {title}
         </h1>
+        {/* gradient rule draws in under the title */}
+        <motion.div
+          initial={{ scaleX: 0 }}
+          animate={{ scaleX: 1 }}
+          transition={{ duration: 1.1, delay: 0.45, ease: [0.22, 1, 0.36, 1] }}
+          className="mt-8 h-px w-40 origin-left bg-gradient-to-r from-iris via-orchid to-transparent"
+        />
         {sub && (
           <motion.p
             initial={{ opacity: 0, y: 24 }}

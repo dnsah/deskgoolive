@@ -22,7 +22,7 @@ export default function ServicesIndex() {
 
       <section className="relative pb-28 md:pb-36">
         <div className="mx-auto max-w-7xl space-y-6 px-6 lg:px-10">
-          {SERVICES.map((s, i) => (
+          {SERVICES.map((s) => (
             <motion.div
               key={s.slug}
               initial={{ opacity: 0, y: 48 }}

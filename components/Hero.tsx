@@ -14,7 +14,7 @@ const LINES = [
 
 const CHIPS = [
   { label: "Next.js", className: "left-[6%] top-[22%]", anim: "animate-float" },
-  { label: "Flutter", className: "right-[7%] top-[26%]", anim: "animate-float-slow" },
+  { label: "Flutter", className: "right-[7%] top-[26%]", anim: "animate-float-x" },
   { label: "ERP / POS", className: "left-[9%] bottom-[24%]", anim: "animate-float-slow" },
   { label: "Cloud", className: "right-[10%] bottom-[30%]", anim: "animate-float" },
 ];
@@ -59,7 +59,7 @@ export default function Hero() {
           className={`absolute z-10 hidden lg:block ${c.className}`}
           initial={{ opacity: 0, scale: 0.6 }}
           animate={started ? { opacity: 1, scale: 1 } : {}}
-          transition={{ delay: 1.6, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ delay: 0.9, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         >
           <div
             className={`${c.anim} gradient-border rounded-full border border-line bg-panel/60 px-5 py-2.5 font-display text-sm font-medium text-fog backdrop-blur-md`}
@@ -93,7 +93,7 @@ export default function Hero() {
                   line.style === "stroke"
                     ? "text-stroke"
                     : line.style === "gradient"
-                      ? "text-gradient"
+                      ? "text-gradient-shimmer"
                       : "text-mist"
                 }`}
                 {...lineAnim(i)}
@@ -127,7 +127,7 @@ export default function Hero() {
             <Magnetic>
               <a
                 href="#contact"
-                className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-iris to-orchid px-7 py-4 text-sm font-semibold text-white shadow-[0_8px_40px_-8px_rgba(110,91,255,0.7)] transition-shadow hover:shadow-[0_8px_60px_-4px_rgba(110,91,255,0.9)]"
+                className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-iris to-orchid px-7 py-4 text-sm font-semibold text-white animate-glow-pulse"
               >
                 <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/25 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
                 Start a project
@@ -140,7 +140,7 @@ export default function Hero() {
                 className="inline-flex items-center gap-2 rounded-full border border-line px-7 py-4 text-sm font-semibold text-mist transition-colors hover:border-white/30 hover:bg-white/5"
               >
                 Explore services
-                <ArrowDown className="h-4 w-4" />
+                <ArrowDown className="h-4 w-4 transition-transform duration-300 group-hover:translate-y-0.5 motion-safe:animate-bounce" />
               </a>
             </Magnetic>
           </motion.div>
@@ -150,7 +150,7 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={started ? { opacity: 1 } : {}}
-          transition={{ delay: 1.5, duration: 1 }}
+          transition={{ delay: 0.8, duration: 1 }}
           className="mt-16 flex items-center gap-3 text-xs tracking-[0.3em] text-fog/70 uppercase"
         >
           <span className="relative h-10 w-px overflow-hidden bg-white/15">

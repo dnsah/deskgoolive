@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useMotionValue, useSpring } from "motion/react";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 /**
  * Decorative cursor follower — a blend-difference ring that trails the
@@ -15,18 +15,25 @@ export default function CustomCursor() {
   const sy = useSpring(y, { stiffness: 400, damping: 35, mass: 0.6 });
   const [hovering, setHovering] = useState(false);
   const [visible, setVisible] = useState(false);
+  const visibleRef = useRef(false);
 
   useEffect(() => {
     const move = (e: MouseEvent) => {
       x.set(e.clientX);
       y.set(e.clientY);
-      setVisible(true);
+      if (!visibleRef.current) {
+        visibleRef.current = true;
+        setVisible(true);
+      }
     };
     const over = (e: MouseEvent) => {
       const t = e.target as HTMLElement | null;
       setHovering(!!t?.closest("a, button, [data-cursor-hover]"));
     };
-    const leave = () => setVisible(false);
+    const leave = () => {
+      visibleRef.current = false;
+      setVisible(false);
+    };
 
     window.addEventListener("mousemove", move, { passive: true });
     window.addEventListener("mouseover", over, { passive: true });
