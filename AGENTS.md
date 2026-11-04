@@ -1,9 +1,22 @@
-<!-- BEGIN:nextjs-agent-rules -->
 
-# This is NOT the Next.js you know
+## Project
+Deskgoo is an animated marketing site built with Next.js 16 (App Router), React 19, Tailwind CSS v4, and Motion (Framer Motion).
 
-This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+## Commands
+- `npm install` to install dependencies
+- `npm run dev` to start the dev server at http://localhost:3000
+- `npm run build` to create a production build
+- `npm run lint` to lint the code
 
-This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+## Structure
+- `app/`: layout, global styles (Tailwind v4 theme), and the page
+- `components/`: one file per section, plus shared primitives (`Reveal`, `Magnetic`)
+- `lib/`: shared helpers
+- `public/`: static assets
 
-<!-- END:nextjs-agent-rules -->
+## Conventions
+- Use TypeScript and functional React components.
+- Every animation must respect `prefers-reduced-motion`.
+- Animate `transform` and `opacity` where possible for performance.
+- Interactive elements must be keyboard accessible with visible focus states.
+- Run `npm run lint` and `npm run build` before submitting changes.
