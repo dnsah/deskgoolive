@@ -40,8 +40,8 @@ npm run lint     # lint the code
 
 - `Reveal` (`components/Reveal.tsx`): scroll-triggered fade and slide-in wrapper for any element.
 - `Magnetic` (`components/Magnetic.tsx`): makes buttons and links follow the cursor with a magnetic pull.
-- Preloader (`components/???.tsx`): 0→100% counter with a logo reveal on first load.
-- Marquee (`components/???.tsx`): angled, infinitely scrolling text strip.
+- Preloader (`components/Preloader.tsx`): 0→100% counter with a logo reveal on first load.
+- Marquee (`components/Marquee.tsx`): angled, infinitely scrolling text strip.
 
 ## Structure
 
