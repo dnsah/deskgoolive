@@ -53,6 +53,7 @@ Edit copy/stats/testimonials directly inside the matching component file.
 ## Contributing
 
 Issues and PRs welcome. Run `npm run lint` before opening a PR.
+Pull requests are reviewed automatically by Codex for bugs, accessibility, reduced-motion handling, and animation performance.
 
 ## License
 
